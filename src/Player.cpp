@@ -13,7 +13,8 @@ Player::Player() {
 	x = 0;
 	y = 0;
 	w = 24;
-	h = 112;
+	//h = 112; original
+	h = 40;
 	score = 0;
 	moveUp = false;
 	moveDown = false;

@@ -206,7 +206,7 @@ int main(int argc, char *argv[]) {
 	bool startgame = false;
 	bool paused = false;
 	bool winner = false;
-	bool firepong = false;
+	bool firepong = true;
 	float fireTimer = 0;
 	float fireRate = 15;
 
@@ -265,8 +265,8 @@ int main(int argc, char *argv[]) {
 							break;
 						case SDLK_d:	// Player 1, shoot
 							if (startgame) {
-								p1.shoot = true;
-								p1.shootTimer = 60 * 5;
+								//p1.shoot = true;
+								//p1.shootTimer = 60 * 5;
 							}
 							break;
 					}
@@ -362,7 +362,7 @@ int main(int argc, char *argv[]) {
 			for (int i = 0; i < part.max; i++) {
 				if (particles[i].alive && particles[i].tag == "slow") {
 					if (checkCollision(particles[i].x, particles[i].y, particles[i].w, particles[i].h, p2.getX(), p2.getY(), p2.getWidth(), p2.getHeight()) ) {
-						p2.speedY = p2.speedY - p2.speedY * 1.3;
+						//p2.speedY = p2.speedY - p2.speedY * 1.3;
 						particles[i].alive = false;
 						part.count--;
 					}
